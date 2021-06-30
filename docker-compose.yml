@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  client-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker-eureka-server-service
+    restart: always
+    ports:
+      - 8761:8761
+    networks:
+      bank_network:
+        aliases:
+          - app_subnet
+        #ipv4_address: 172.20.0.3
+networks:
+  bank_network:
+    name: app_subnet
+    external: true
