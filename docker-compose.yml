@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  client-service:
+  registry-service:
     build:
       context: .
       dockerfile: Dockerfile
