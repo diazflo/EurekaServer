@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: docker-eureka-server-service
+    container_name: docker-registry-service
     restart: always
     ports:
       - 8761:8761
